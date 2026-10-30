@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Genova P.P.</title>
+  <link href="stile.css" rel="stylesheet">
+
+  <style>
+    a.perso:link {text-decoration:none; color:black;}
+    a.perso:visited {text-decoration:none; color:black;}
+    a.perso:hover {text-decoration:underline; color:black;}
+    #treno {
+      position: relative;
+      -webkit-animation: floatBubble 10s infinite  normal ease-out;
+      animation: floatBubble 10s infinite normal linear;
+    }
+    @-webkit-keyframes floatBubble {
+      0% {
+        left:-300px;
+      }
+      100% {
+        left: 1200px;
+      }
+    }
+    @keyframes floatBubble {
+      0% {
+        left:-300px;
+      }
+      100% {
+        left: 1200px;
+      }
+    }
+
+article, aside, figure, figcaption, footer, header, hgroup, nav, section{
+	     display: block;
+}
+
+body {
+	width: 1200px;
+	margin: 0 auto 0 auto;
+	font-size: 18px;
+	font-family:Arial, sans-serif;
+}
+header {
+	width: 1160px;
+	height: 50px;
+	background-color: #FF9900;
+	padding: 10px;
+	margin: 10px;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+header img {
+    width: 200px;
+    display: block;
+    float: left;
+	}
+header h1 {
+    padding: 0px;
+    margin: 7px;
+    font-size: 20px; 
+}
+header h2 {
+    padding: 0px;
+	margin: 7px;
+    font-size: 16px; 
+}
+header h3 {
+    padding: 0px;
+    margin: 7px;
+    font-size: 12px; 
+}	
+header h4 {
+    padding: 0px;
+    margin: 7px;
+    font-size: 12px; 
+    font-weight: normal;
+}
+nav {
+	width: 1180px;
+	height: 48px;
+	background-color: #9B5D00;
+	margin: 10px 10px 10px 10px;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+article {
+	width: 560px;
+	height: 400px;
+	float: left;
+	background-color: #dcd6cd;
+	#padding: 10px;
+	margin-right: 20px;	
+	margin-left: 10px;	
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+article header {
+	width: 540px;
+	height: 25px;
+	-webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+	padding: 10px;
+	margin: 10px 0 0 0;
+	background-color: #dcd6cd;
+}
+article section {
+	width: 540px;
+	height: 120px;
+	background-color: #dcd6cd;
+	padding: 10px;
+	margin: 10px 0 0 0;
+	-webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+article p {
+    padding: 5px;
+    margin: 10px 10px 0px;
+	font-size:15px;
+	}
+article footer {
+	width: 540px;
+	height: 50px;
+	background-color: #dcd6cd;
+	padding: 10px;
+	margin: 10px 0 0 10px;
+	color:#000;
+	text-align:left;
+	-webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+aside {
+	width: 600px;
+	height: 400px;
+	float: left;
+	#background-color: #FF9900;
+	background-color: #FFFFFF;
+	#padding: 10px;	
+	margin: 0 0 0 0;
+	#-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  #-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  #box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+footer {
+	clear: both;
+	width: 1180px;
+	height: 30px;
+	background-color: #b4b3b1;
+	padding: 0px;
+	margin: 10px;
+	color:#fff;
+	font-size:14px;
+	text-align:left;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+}
+ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 15px;
+  background: #FFC163;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+ul li a {color:#000;}
+ul li:hover {
+  background: #ccc;
+  color: #fff;
+}
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li { 
+  background: #ccc; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+ul li ul li:hover { background: #666; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+  </style>
+
+</head>
+
+<body>
+<header> 
+  <h2>La stazione di Genova Piazza Principe e dintorni</h2>
+  <h3> breve storia fotografica</h3>
+</header>
+
+<nav aria-label="Navigazione cronologica e mappe">
+  <ul class="nav-list">
+    <li><a href="#p01">01</a></li>
+    <li><a href="#p02">02</a></li>
+    <li><a href="#p03">03</a></li>
+    <li><a href="#p04">04</a></li>
+    <li><a href="#p05">05</a></li>
+    <li><a href="#p06">06</a></li>
+    <li><a href="#p07">07</a></li>
+    <li><a href="#p08">08</a></li>
+    <li><a href="#p09">09</a></li>
+    <li><a href="#p10">10</a></li>
+    <li><a href="#p11">11</a></li>
+    <li><a href="#p12">12</a></li>
+    <li><a href="#p13">13</a></li>
+    <li><a href="#p14">14</a></li>
+    <li><a href="#p15">15</a></li>
+    <li><a href="#p16">16</a></li>
+    <li><a href="#p17">17</a></li>
+    <li><a href="#p18">18</a></li>
+    <li><a href="#p19">19</a></li>
+    <li><a href="#p20">20</a></li>
+    <li><a href="#m1">Map 1</a></li>
+    <li><a href="#m2">Map 2</a></li>
+    <li><a href="#m3">Map 3</a></li>
+  </ul>
+</nav>
+
+
+<div style="width:1210px; height:400px; overflow-y:hidden;">
+
+  <article id="p01">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;01&nbsp;</mark> 1870 ca. Panorama da S. Brigida</h3>
+      <h4>Credit Alfred Noack (1833-1895)  da Musei di Genova, proprietà Comune di Genova</h4>
+    </header>
+
+    <p>
+      La stazione, su progetto di Alessandro Mazzucchetti, viene inaugurata nel 1860, qualche
+      anno dopo il completamento della ferrovia Torino-Genova (1853). È una stazione di testa
+      e il fascio di binari è coperto da una volta in ferro.<br>
+      Il prospetto è ad angolo con un corpo centrale per l’ingresso dei viaggiatori
+      e due ali laterali simmetriche costituite da un porticato a 4 colonne terminato da un portale ad arco.
+    </p>
+    <p>
+      Nei primi del ‘900 la stazione viene ampliata su progetto di Giacomo Radini Tedeschi. L’ala di destra
+      è stata prolungata per creare l’attuale accesso.
+    </p>
+    <p>
+      L’arco di sinistra permetteva l’accesso a via Andrea Doria. Viene demolito nel 1931 per questioni di viabilità.
+    </p>
+   
+  </article>
+
+  <aside>
+      <img style="float: right;" src="./pp/Immagine01.png" height=400px/>
+  </aside>
+
+  <article id="p02">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;02&nbsp;</mark> 1870 ca. Interno della stazione Principe</h3>
+      <h4>Credit Luciana Frassati, Genova come era, Cassa di Risparmio di Genova e Imperia, 1987.</h4>
+    </header>
+
+      <p>
+	La copertura della stazione è costituita da una volta in ferro a campata unica, sostenuta dalle strutture laterali
+	dell'edificio.
+      </p>
+   
+  </article>
+   
+  <aside>
+      <img style="float: right;" src="./pp/Immagine02.png" height=400px/>
+  </aside>
+
+  <article id="p03">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;03&nbsp;</mark> 1880 ca. Le mura di S. Michele e l'imbocco della Traversata</h3> 
+      <h4>Credit Luciana Frassati, Genova come era, Cassa di Risparmio di Genova e Imperia, 1987.</h4>
+    </header>
+
+    <p>
+      Nel 1872 viene aperta una galleria di collegamento con Brignole. Il tracciato iniziale è
+      leggermente diverso da quello attuale della Traversata Vecchia.  Il portale è a sinistra
+      in foto, sotto le mura di S. Michele e più arretrato rispetto a quello di oggi.
+    </p>
+    <p>
+      I treni che arrivano a Principe (a destra) e  proseguono verso Brignole devono
+      retrocedere di qualche centinaio di metri per imboccare la galleria. Una soluzione scomoda
+      alla quale si pone rimedio con modifiche successive.
+    </p>
+   
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine03.png" height=400px/>
+  </aside>
+
+  <article id="p04">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;04&nbsp;</mark> 1901. Lavori di demolizione del bastione di S. Michele</h3>
+      <h4>Credit Musei di Genova, proprietà Comune di Genova</h4> 
+    </header>
+    
+    <p>
+      E’ iniziato un progetto di ampliamento della stazione che porta, in più fasi, alla
+      demolizione delle mura e del bastione di S. Michele.
+    </p>
+    <p>
+      La vista è verso ponente e sulla collina si vede la chiesa di S. Rocco
+     </p>
+   
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine04.png" height=400px/>
+  </aside>
+
+  <article id="p05">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;05&nbsp;</mark> Inizio '900? Avanzamento lavori per la nuova stazione</h3>
+      <h4>Credit Foto Collezione Stefano Finauri, genovacards.com</h4> 
+    </header>
+
+    <p>
+      Le mura di S. Michele sono state sbancate per consentire l’ampliamento della stazione.
+    </p>
+    <p>
+      Il tracciato della Traversata viene modificato realizzando una nuova galleria che si
+      apre sul piazzale binari della futura stazione (al centro della foto). Dopo qualche centinaio di
+      metri la nuova galleria si raccorda al vecchio tunnel del 1872 per proseguire verso Brignole.
+    </p>
+
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine05.png" height=400px/>
+  </aside>
+
+  <article id="p06">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;06&nbsp;</mark> 2 settembre 1904. Inaugurazione della nuova stazione Principe</h4>
+      <h4>Credit Musei di Genova, proprietà Comune di Genova</h3> 
+    </header>
+
+    <p>
+      La nuova stazione dispone di sei binari e due banchine coperte da  pensiline.
+    </p>
+
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine07.png" height=400px/>
+  </aside>
+
+  <article id="p07">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;07&nbsp;</mark> 2 settembre 1904. Inaugurazione della nuova stazione Principe</h3>
+      <h4>Credit Musei di Genova, proprietà Comune di Genova</h4> 
+    </header>
+
+    <p>
+      Il nuovo imbocco della Traversata consente ai treni diretti a Brignole, o provenienti da essa, di evitare manovre di retrocessione.
+    </p>
+
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine06.png" height=400px/>
+  </aside>
+
+  <article id="p08">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;08&nbsp;</mark> 1932 ca. L'epoca della trazione trifase</h3>
+      <h4>Credit www.ilportaledeitreni.it</h4> 
+    </header>
+
+    <p>
+      L'elettrificazione in corrente alternata trifase delle linee genovesi viene
+      attivata nel 1911 sulla tratta Pontedecimo-Busalla e raggiunge Principe nel 1916.
+    </p>
+    <p>
+      In primo piano una E431. Da destra verso sinistra: nuova stazione Principe, Traversata,
+      mura di S. Michele. Nell'angolo a sinistra un convoglio impegna la vecchia galleria diretta a Brignole
+      del 1872. Dopo la realizzazione della variante di tracciato questo tunnel viene utilizzato come ricovero per i treni
+      fino all'intersezione con la Traversata.
+    </p>
+
+    <p>
+      Il portale e il primo tratto scompaiono con la successiva demolizione delle mura. Il tratto
+      seguente rimane accessibile almeno fino agli anni '90 del '900 dall'interno della
+      Traversata Nuova.
+    </p>
+    <p>
+      La trazione trifase viene progressivamente sostituita dal sistema a corrente continua a partire dal 1963.
+    </p>
+
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine08.png" height=400px/>
+  </aside>
+
+  <article id="p09">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;09&nbsp;</mark> Anni '30. Vista panoramica della stazione</h3>
+      <h4>Credit www.ferrovie.it</h4> 
+    </header>
+
+    <p>
+      Si vede chiaramente la configurazione di Principe dopo l'ampliamento del 1904: un impianto costituito da due parti, una di testa e l’altra passante.
+    </p>
+
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine09.png" height=400px/>
+  </aside>
+
+  <article id="p10" style="height: 360px;">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;10&nbsp;</mark> Anni '30. Vista verso ponente</h3>
+      <h4>Credit Archivio Fondazione FS</h4> 
+    </header>
+
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine10.png" height=360px/>
+  </aside>
+
+  <article id="p11">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;11&nbsp;</mark> Fine anni '30? Il secondo ampliamento</h3>
+      <h4>Credit www.marklinfan.com da photobucket.com</h4> 
+    </header>
+
+    <p>
+      Le mura di S. Michele sono in fase di sbancamento per fare posto a ulteriori binari.
+    </p>
+    <p>
+      Questi lavori fanno parte di un progetto che modifica profondamente il nodo
+      della stazione Principe.
+      Sul lato di ponente viene realizzata la doppia galleria di S. Rocco (visibile sullo sfondo a sinistra)
+      e iniziati i lavori della galleria Granarolo, poi interrotti e terminati nel 1962.
+      Sul lato di levante viene aperta la Traversata Nuova (1941).
+      </p>
+
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine11.png" height=400px/>
+  </aside>
+
+  <article id="p12">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;12&nbsp;</mark> Anni '40. La Traversata Nuova</h3>
+      <h4>Credit www.marklinfan.com da photobucket.com</h4> 
+    </header>
+
+    <p>
+      Le mura di S. Michele sono state completamente sbancate per fare posto ai nuovi binari e alla Traversata Nuova.
+      Al loro posto c’è un muraglione di contenimento che ridisegna il margine della collina.
+    </p>
+    <p>
+      La copertura in ferro della vecchia stazione di testa è stata smantellata (a destra).
+    </p>
+
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine12.png" height=400px/>
+  </aside>
+  
+  <article id="p13">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;13&nbsp;</mark> 2016 ca. La stazione oggi</h3>
+      <h4>Credit Roberto Lo Savio - Editorial use only</h4> 
+    </header>
+
+    <p>
+      A destra il fascio di binari della vecchia stazione di testa è stato rimosso
+      nei primi anni 2000 per costruire nuovi edifici e un parcheggio.
+      I binari tronchi avevano un uso marginale dopo l’apertura del passante suburbano
+      e della stazione Sotterranea (1993).
+    </p>
+    <p>
+      Le due Traversate e il muraglione di contenimento sono come negli anni ‘40.
+    </p>
+
+  </article>
+ 
+  <aside>
+      <img style="float: right;" src="./pp/Immagine13.png" height=400px/>
+  </aside>
+
+  <article id="p14">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;14&nbsp;</mark> 1860 ca? Ritorno alle origini. Veduta di Genova dalle alture di Sampierdarena</h3>
+      <h4>Credit Alfred Noack (1833-1895)</h4>
+    </header>
+
+    <p>
+      Al centro le mura di S. Michele e, a destra, il suo bastione. Dietro si vede la copertura della vecchia Stazione Principe. 
+    </p>
+   
+  </article>
+
+  <aside>
+      <img style="float: right;" src="./pp/Immagine14.png" height=400px/>
+  </aside>
+  
+  <article id="m1" style="width: 430px;">
+    
+    <header style="width: 250px;">
+      <h3>Le gallerie ferroviarie</h3>
+    </header>
+    
+    <p>
+      Le gallerie attualmente attive sono evidenziate sulla mappa Touring Club del 1916
+      che permette di apprezzare l’impianto urbanistico prima della seconda trasformazione
+      degli anni ’30.
+      I tracciati ferroviari sono abbastanza attendibili ma non hanno la pretesa di essere topograficamente esatti.
+    </p>
+    
+    <b>
+      <p style="line-height:1.7;">
+	<mark style="color:white; background-color:#156082;"> 1853: S. Lazzaro Alta </mark><br>
+        <mark style="color:white; background-color:#00B050;"> 1872/1904: Traversata Vecchia </mark><br>
+	<mark style="color:white; background-color:#FFC000;"> 1881: S. Lazzaro Bassa </mark><br>
+        <mark style="color:white; background-color:#FF0000;"> 1888: S. Tomaso </mark><br>
+        <mark style="color:white; background-color:#A02B93;"> 1941: Traversata Nuova </mark><br>
+        <mark style="color:white; background-color:#00B0F0;"> 19??: S. Rocco </mark><br>
+        <mark style="background-color:#FFFF00;"> 1962: Granarolo </mark><br>
+        <mark style="color:white; background-color:#0070C0;"> 1993: Colombo </mark><br>
+      </p>
+    </b>
+    
+  </article>
+  
+  <aside style="width: 730px;">
+      <img style="float: right;" src="./pp/Immagine15.png" height=400px/>
+  </aside>
+  
+  <article id="m2" style="width: 383px;">
+    
+    <header style="width: 250px;">
+      <h3>Dettaglio della zona di Principe</h3>
+      <h4> </h4>
+    </header>
+    
+    <p>
+      <b>1872/1904. </b><mark style="background-color:#00B050;">Traversata Vecchia</mark>.
+      Nuovo tracciato iniziale (1904) e poi proseguimento nel tunnel del 1872. La prima
+      parte della Traversata 1° è usata come binario di ricovero.<br>
+      
+      <b>1888. </b><mark style="background-color:#FF0000;">Galleria S. Tomaso</mark>,
+      bivio Traversata. Per merci dal porto (S. Limbania) verso Brignole e viceversa<br>
+
+      <b>1941. </b><mark style="background-color:#A02B93;">Traversata Nuova</mark><br>
+
+      <b>1993. </b> Passante suburbano e stazione Principe Sotterranea. Il passante
+      usa vecchie linee portuali: galleria di S. Lazzaro Bassa, binari dell’ex  parco
+      di S. Limbania e galleria S. Tomaso (binario pari) di cui viene modificato l’imbocco.
+      Viene costruita la nuova <mark style="background-color:#0070C0;"> galleria Colombo</mark> (binario dispari)<br>
+
+      <b>2026. </b> Sestuplicamento. <mark style="background-color:#80350E;">Prolungamento galleria
+	S. Tomaso</mark> verso la galleria delle Grazie Bassa e prolungamento galleria Colombo per separare
+      completamente  il passante dalle Traversate
+    </p>
+    
+  </article>
+  <aside style="width: 777px;">
+      <img style="float: right;" src="./pp/Immagine16.png" height=400px/>
+  </aside>
+
+  <article id="m3" style="width: 500px;">
+    
+    <header style="width: 250px;">
+      <h3>Sul lato di Brignole</h3>
+      <h4> </h4>
+    </header>
+
+    <b>
+      <p style="line-height:1.7;">
+        <mark style="color:white; background-color:#00B050;"> 1872/1904: Traversata Vecchia </mark><br>
+        <mark style="color:white; background-color:#FF0000;"> 1888: S. Tomaso </mark><br>
+        <mark style="color:white; background-color:#000000;"> 1888?: Grazie Bassa </mark><br>
+        <mark style="color:white; background-color:#3B7D23;"> 1916: Grazie Alta </mark><br>
+        <mark style="color:white; background-color:#A02B93;"> 1941: Traversata Nuova </mark><br>
+        <mark style="color:white; background-color:#0070C0;"> 1993: Colombo </mark><br>
+        <mark style="color:white; background-color:#00B0F0;"> 2026: Prolungamento Colombo</mark><br>
+        <mark style="color:white; background-color:#80350E;"> 2026: Prolungamento S. Tomaso </mark><br>
+      </p>
+    </b>
+    
+  </article>
+  <aside style="width: 660px;">
+      <img style="float: right;" src="./pp/Immagine17.png" height=400px/>
+  </aside>
+
+  <article id="p15">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;15&nbsp;</mark> Il progetto di "sestuplicamento"</h3>
+      <h4>Credit Bing Maps</h4>
+    </header>
+
+    <p>
+      Intorno al 2010 prende forma il progetto di "sestuplicamento" concepito per rendere il collegamento
+      tra Principe Sotterranea e Brignole completamente indipendente dalle Traversate.
+    </p>
+    <p>
+      L'opera consiste nel prolungamento delle gallerie storiche esistenti, la Colombo e la S. Tomaso, fino a Brignole.
+      Il prolungamento della S. Tomaso prevede il riutilizzo parziale della galleria delle Grazie Bassa.
+      Quest'ultima collegava la parte orientale del porto (Calata delle Grazie) a Brignole fin dall'inizio del XX
+      secolo ma era stata dismessa nel 1939.
+      Il tratto iniziale, insieme a quello della galleria delle Grazie Alta, è stato recuperato e utilizzato per la metro (1990).
+    </p>
+    <p>
+      Questa foto è una vista area verso ponente dell'area di Brignole e risale al 2005 circa.
+    </p>
+      <p>
+      In basso a destra si vede il portale della galleria delle Grazie Bassa in completo stato di abbandono.
+      In alto a sinistra ci sono i portali delle Traversate. 
+    </p>
+
+  </article>
+
+  <aside>
+      <img style="float: right;" src="./pp/Immagine18.png" height=400px/>
+  </aside>
+
+  <article id="p16">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;16&nbsp;</mark> Il progetto di "sestuplicamento"</h3>
+      <h4>Credit ?</h4>
+    </header>
+
+    <p>
+      Nella foto, scattata intorno al 2012, si vedono i lavori all’imbocco della Grazie Bassa durante
+      i quali sono stati demoliti i palazzi a destra del portale.
+    </p>
+
+  </article>
+
+  <aside>
+      <img style="float: right;" src="./pp/Immagine19.png" height=400px/>
+  </aside>
+
+  <article id="p17">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;17&nbsp;</mark> Il progetto di "sestuplicamento"</h3>
+      <h4>Credit Jacopo Raspanti, tuttoTRENO</h4>
+    </header>
+
+    <p>
+      Nella foto della stessa area scattata intorno al 2015, si vede chiaramente che la galleria delle
+      Grazie è stata risagomata e consolidata.
+    </p>
+    <p>
+      Inoltre alla sua destra compare un secondo portale: è il prolungamento
+      della galleria Colombo che prima si immetteva nella Traversata Nuova
+      (binario dispari, itinerario Principe Sotterranea-Brignole).
+    </p>
+
+  </article>
+
+  <aside>
+      <img style="float: right;" src="./pp/Immagine20.png" height=400px/>
+  </aside>
+
+  <article id="p18" style="width: 460px;">
+    
+    <header style="width: 250px;">
+      <h3><mark style="background-color:#FFC163">&nbsp;18&nbsp;</mark> Il progetto di "sestuplicamento"</h3>
+      <h4>Credit terzovalico.it</h4>
+    </header>
+
+    <p>
+      In questa foto del 2024 il portale della galleria delle Grazie Bassa (Nuova S. Tomaso) e quello
+      del prolungamento della Colombo (Nuova Colombo) sono nascosti da una galleria artificiale
+      sopra la quale verrà realizzato un parcheggio multipiano.
+    </p>
+    <p>
+      Oltre la galleria artificiale (verso destra) sono in corso di realizzazione due
+      nuove banchine per il servizio passeggeri a Brignole.
+    </p>
+
+  </article>
+
+  <aside style="width: 700px;">
+      <img style="float: right;" src="./pp/Immagine21.png" height=400px/>
+  </aside>
+
+  <article id="p19" style="width: 760px;">
+    
+    <header style="width: 700px;">
+      <h3><mark style="background-color:#FFC163">&nbsp;19&nbsp;</mark> Lo sbocco delle Traversate a Brignole</h3>
+      <h4>Credit Luigi Iorio, www.ilportaledeitreni.it & Il Cinquantenario delle ferrovie dello Stato 1905-1955, CIFI 1955</h4>
+    </header>
+
+    <p>
+      C’è un particolare poco conosciuto che riguarda lo sbocco delle Traversate a Brignole.
+      Come è noto, la Traversata Nuova è quella a monte (a destra in foto).
+      Ma la galleria nuova aperta nel 1941 è quella di sinistra!
+    </p>
+    <p>
+      Il nuovo tunnel del 1941 parte da Principe e si sviluppa effettivamente a
+      monte di quello vecchio. Circa 200 metri prima dello sbocco a Brignole,
+      i due tunnel si intersecano in una camera di biforcazione scavata per
+      collegare i due tracciati.
+    </p>
+    <p>
+      Dalla camera  il nuovo tunnel prosegue sul lato a mare e quindi
+      sbuca a sinistra del vecchio.
+      L’ultimo tratto dei binari della Traversata Vecchia è stato
+      instradato nel nuovo tunnel mentre i binari della Traversata Nuova
+      sono stati fatti  proseguire verso Brignole nel vecchio.
+    </p>
+    <p>
+      La foto a fianco è stata scattata nella camera di biforcazione
+      con vista verso Brignole, quindi speculare rispetto a quella sopra.
+      A sinistra c’è il vecchio tunnel dove passava la
+      Traversata del 1872. A destra c’è il nuovo del 1941.
+    </p>
+
+  </article>
+
+  <aside style="width: 400px;">
+      <img style="float: right;" src="./pp/Immagine22.png" height=400px/>
+  </aside>
+
+  <article id="p20">
+    
+    <header>
+      <h3><mark style="background-color:#FFC163">&nbsp;20&nbsp;</mark> Lo sbocco delle Traversate a Brignole</h3>
+      <h4>Credit planimetria comune.genova.it, luglio 2022</h4>
+    </header>
+
+    <p>
+      In questo disegno la linea verde rappresenta in modo approssimativo il tracciato
+      del tunnel originale della Traversata (1872).
+      Le parti scavate per la Traversata Nuova (1941) sono in viola.
+    </p>
+    <p>
+      Le linee nere rappresentano i binari in corretto tracciato ancora oggi
+      in servizio. Emerge chiaramente che i binari della Traversata Vecchia
+      sono stati deviati nel nuovo tunnel, mentre quelli della Traversata
+      Nuova sono stati fatti proseguire nel vecchio.
+    </p>
+    <p>
+      L’intersezione tra i due tunnel e gli scavi aggiuntivi per raccordarli
+      hanno creato la camera di biforcazione. Al suo interno ci sono i deviatoi
+      che permettono di instradare i treni da una linea all’altra.
+    </p>
+
+  </article>
+
+  <aside>
+      <img style="float: right;" src="./pp/Immagine23.png" height=400px/>
+  </aside>
+
+
+</div>
+
+<footer style="overflow: hidden; background-image: url('./nuvole.jpg');">
+  <div id="treno"><img SRC="./640.gif" height=30></div>
+</footer>
+</body>
+</html>
